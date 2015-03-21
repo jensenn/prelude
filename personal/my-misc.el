@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/personal")
+
 (cua-mode t)
 (menu-bar-mode t)
 (setq prelude-guru nil)
@@ -16,6 +18,3 @@
     (setq automatic-hscrolling t)
     ))
 
-(add-to-list 'load-path "~/.emacs.d/personal")
-(add-to-list 'load-path "~/.emacs.d/personal/p4")
-(require 'p4)
