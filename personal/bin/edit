@@ -1,0 +1,8 @@
+#!/bin/bash
+tempuid=$(id -u)
+if [ ! -e "/tmp/emacs$tempuid/server" ]
+then
+    emacs &
+    while [ ! -e "/tmp/emacs$tempuid/server" ] ; do sleep 1 ; done
+fi
+emacsclient -n "$@"
